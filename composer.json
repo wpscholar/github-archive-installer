@@ -1,0 +1,23 @@
+{
+  "name": "wpscholar/github-archive-installer",
+  "description": "A custom Composer installer that will install a dependency from a GitHub release archive .zip file when installing from distribution.",
+  "type": "composer-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Micah Wood",
+      "email": "micah@wpscholar.com"
+    }
+  ],
+  "require": {
+    "composer-plugin-api": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "wpscholar\\Composer\\": "src"
+    }
+  },
+  "extra": {
+    "class": "wpscholar\\Composer\\GithubArchiveInstaller"
+  }
+}
