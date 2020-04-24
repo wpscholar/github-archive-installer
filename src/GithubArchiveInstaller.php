@@ -42,7 +42,7 @@ class GithubArchiveInstaller implements PluginInterface, EventSubscriberInterfac
 	 * Apply plugin modifications to Composer.
 	 *
 	 * @param \Composer\Composer       $composer Composer instance
-	 * @param \Composer\IO\IOInterface $io Input/Output interface
+	 * @param \Composer\IO\IOInterface $io       Input/Output interface
 	 */
 	public function activate( Composer $composer, IOInterface $io ) {
 		$this->composer = $composer;
@@ -112,6 +112,26 @@ class GithubArchiveInstaller implements PluginInterface, EventSubscriberInterfac
 		 * @var \Composer\DependencyResolver\Operation\InstallOperation $operation
 		 */
 		return $operation->getPackage();
+	}
+
+	/**
+	 * Deactivate
+	 *
+	 * @param \Composer\Composer       $composer Composer instance
+	 * @param \Composer\IO\IOInterface $io       Input/Output interface
+	 */
+	public function deactivate( Composer $composer, IOInterface $io ) {
+		// Nothing to do here.
+	}
+
+	/**
+	 * Uninstall
+	 *
+	 * @param \Composer\Composer       $composer Composer instance
+	 * @param \Composer\IO\IOInterface $io       Input/Output interface
+	 */
+	public function uninstall( Composer $composer, IOInterface $io ) {
+		// Nothing to do here.
 	}
 
 }
